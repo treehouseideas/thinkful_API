@@ -1,5 +1,5 @@
 app.controller("mainController", function($scope, $http){
-    $scope.apiKey = "53f8cdaef4194480aa8993a82ddf79f8";
+    $scope.apiKey = "089c4fbdd0fd9585f5ac6864d09a16b5c162f807a4306aabd15c4e0a14b80585";
     $scope.results = [];
     $scope.filterText = null;
     $scope.availableGenres = [];
