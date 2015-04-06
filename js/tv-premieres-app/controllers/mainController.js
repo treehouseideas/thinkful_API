@@ -13,7 +13,7 @@ app.controller("mainController", function($scope, $http){
         var today = new Date();
         //Create the date string and ensure leading zeros if required
         var apiDate = today.getFullYear() + ("0" + (today.getMonth() + 1)).slice(-2) + "" + ("0" + today.getDate()).slice(-2);
-        $http.jsonp('http://api.trakt.tv/calendar/premieres.json/' + $scope.apiKey + '/' + apiDate + '/' + 30 + '/?callback=JSON_CALLBACK').success(function(data) {
+        $http.jsonp('https://api-v2launch.trakt.tv/calendars/all/shows/premieres/' + $scope.apiKey + '/' + apiDate + '/' + 30 + '/?callback=JSON_CALLBACK').success(function(data) {
             //As we are getting our data from an external source, we need to format the data so we can use it to our desired affect
             //For each day get all the episodes
             angular.forEach(data, function(value, index){
